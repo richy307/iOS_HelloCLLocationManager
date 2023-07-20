@@ -290,6 +290,7 @@
 				DEVELOPMENT_TEAM = SCN84PT84W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_HelloCLLocationManager/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get location info to show you good services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +319,7 @@
 				DEVELOPMENT_TEAM = SCN84PT84W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_HelloCLLocationManager/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get location info to show you good services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
