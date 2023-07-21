@@ -42,6 +42,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: coordinate, span: span)
             map.setRegion(region, animated: true)
         }
+        map.userTrackingMode = .followWithHeading // 追蹤使用者模式
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        locationManager?.stopUpdatingLocation() // 停止更新地圖資訊
     }
 
 
