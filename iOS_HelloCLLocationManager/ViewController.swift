@@ -30,6 +30,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization() // 請求授權
         locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.activityType = .automotiveNavigation
+        locationManager?.startUpdatingLocation()
         
         if let coordinate = locationManager?.location?.coordinate{ // 目前座標
             let xScale:CLLocationDegrees = 0.01
