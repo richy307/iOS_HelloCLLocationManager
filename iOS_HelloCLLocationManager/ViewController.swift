@@ -9,10 +9,19 @@ import UIKit
 import MapKit
 import CoreLocation // 目前位置
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var map: MKMapView!
+    
     var locationManager: CLLocationManager?
+    
+    
+    // 每次移動region 都會觸發此方法
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("--------------------------------")
+        print(locations[0].coordinate.latitude)
+        print(locations[0].coordinate.longitude)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +29,7 @@ class ViewController: UIViewController {
         
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization() // 請求授權
+        locationManager?.delegate = self
         
         if let coordinate = locationManager?.location?.coordinate{ // 目前座標
             let xScale:CLLocationDegrees = 0.01
